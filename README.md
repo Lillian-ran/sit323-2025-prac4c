@@ -9,17 +9,26 @@ This microservice extends the functionality of the simple calculator from Task 4
 1. **Install Node.js**  
    Download and install the LTS version from [Node.js Official Website](https://nodejs.org/en/download/).  
    Verify installation:
+   
    node -v
+   
    npm -v
+
 2.**Clone the Repository**
+
 git clone https://github.com/Lillian-ran/sit323-2025-prac4c.git
+
 cd sit323-2025-prac4c
+
 3.**Install Dependencies**
 npm install
 
-Running the Service
+**Running the Service**
+
 Start the microservice:
+
 node app.js
+
 The service will run at http://localhost:3000.
 
 ## API Endpoints
