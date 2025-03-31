@@ -53,32 +53,32 @@ All errors return a standardized JSON response:
 ## Testing Examples
 ### Valid Request
 curl "http://localhost:3000/add?num1=10&num2=5"
-# Response: { "result": 15 }
+Response: { "result": 15 }
 
 
 ### Error Cases
 1. **Missing Parameter**  
 
    curl "http://localhost:3000/add?num1=5"
-   # Response: { "status": 400, "message": "Missing required parameters: 'num1' and 'num2'" }
+   Response: { "status": 400, "message": "Missing required parameters: 'num1' and 'num2'" }
 
 
 2. **Invalid Number**  
 
    curl "http://localhost:3000/multiply?num1=5&num2=abc"
-   # Response: { "status": 400, "message": "Invalid input: 'num2' is not a valid number (received 'abc')" }
+   Response: { "status": 400, "message": "Invalid input: 'num2' is not a valid number (received 'abc')" }
 
 
 3. **Division by Zero**  
 
    curl "http://localhost:3000/divide?num1=10&num2=0"
-   # Response: { "status": 422, "message": "Division by zero is not allowed" }
+   Response: { "status": 422, "message": "Division by zero is not allowed" }
 
 
 4. **Invalid Endpoint**  
 
    curl "http://localhost:3000/invalid"
-   # Response: { "status": 404, "message": "Endpoint not found. Valid endpoints: /add, /subtract, /multiply, /divide" }
+   Response: { "status": 404, "message": "Endpoint not found. Valid endpoints: /add, /subtract, /multiply, /divide" }
 
 
 ### **Key Updates**
